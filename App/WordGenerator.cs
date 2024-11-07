@@ -6,11 +6,11 @@ public class WordGenerator
     Random _random;
     public WordGenerator()
     {
-        
+
 
     }
 
-    public static WordGenerator Create(string filename) 
+    public static WordGenerator Create(string filename)
     {
 
         WordGenerator wordGenerator = new WordGenerator();
@@ -21,5 +21,12 @@ public class WordGenerator
 
     }
 
-  
+    public string Generate()
+    {
+        int index = _random.Next(0, _words.Count);
+        return _words[index];
+
+    }
+
+
 }
